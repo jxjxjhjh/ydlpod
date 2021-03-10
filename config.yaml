@@ -1,16 +1,18 @@
 subscriptions:
-  - name: 测试1
+  - name: test1
     url: https://www.youtube.com/channel/UCmFoIRFXkVZ_yLX8w8BaVAA
-    retention_days: 4 # How old is the oldest video to download and keep locally
+    retention_days: 2 # How old is the oldest video to download and keep locally
     initialize: False # Download the whole channel on first run
     download_last: 1 # Only download the last video at each run
     audio_only: True # Extract and keep audio only
     format: mp3      # Force end format
-  - name: MyPodcast2
+  - name: test2
     url: https://www.youtube.com/channel/UCAQmUESq4GxO1b_iBCrYlTA
-    retention_days: 4 # How old is the oldest video to download and keep locally
+    retention_days: 2 # How old is the oldest video to download and keep locally
     initialize: False # Download the whole channel on first run
     download_last: 1 # Only download the last video at each run
+    ydl_options: # Add custom youtube-dl options
+      writesubtitles: True # Write subtitle file
 
 output_dir: /app
-url_root: http:///ydlpod.191954.xyz/
+url_root: http://ydlpod.191954.xyz/
