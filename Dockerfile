@@ -1,7 +1,7 @@
-FROM alpine:latest
+FROM python
 
 WORKDIR /app
 
-RUN apk --no-cache add ca-certificates git python3 py3-pip ffmpeg
+RUN apk --no-cache add ffmpeg
 RUN pip install git+https://github.com/nbr23/ydl-podcast.git
 CMD nohup python -m http.server 8001
