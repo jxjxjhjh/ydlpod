@@ -1,7 +1,7 @@
-FROM python:3
+FROM alpine:latest
 
 WORKDIR /app
 
-RUN apk --no-cache add ffmpeg
-RUN pip install git+https://github.com/nbr23/ydl-podcast.git
+RUN apk --no-cache add python3 py3-pip ffmpeg \
+&& pip install git+https://github.com/nbr23/ydl-podcast.git
 CMD nohup python -m http.server 8001
