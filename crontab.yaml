@@ -1,7 +1,0 @@
-jobs:
-  - name: ydlpod
-    command: ydl_podcast config.yaml > log.txt
-    shell: /bin/sh
-    schedule: "23 */23 * * *"
-    captureStdout: true
-    executionTimeout: 300
