@@ -1,0 +1,14 @@
+subscriptions:
+  - name: yyy
+    url: https://youtube.com/user/sun2823793
+    retention_days: 2
+    download_last: 1
+    audio_only: True
+  - name: xxx
+    url: https://youtube.com/channel/UCIUYqpXe7yok4x3VkK67B3Q
+    retention_days: 7
+    download_last: 2
+
+
+output_dir: /app/data
+url_root: http://www.xxx.com
