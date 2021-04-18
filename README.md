@@ -1,6 +1,6 @@
 https://github.com/nbr23/ydl-podcast 非官方docker镜像
 
-1.下载 config.yaml docker-compose.yml pod.opml run.sh
+1.下载 config.yaml docker-compose.yml pod.opml run.sh 放到合适的位置（默认/var/www）
 
 2.在 config.yaml 中按格式添加项目
 
