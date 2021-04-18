@@ -1,17 +1,6 @@
-https://github.com/nbr23/ydl-podcast
-非官方docker镜像
+https://github.com/nbr23/ydl-podcast 非官方docker镜像
 
-安装
-
-先将 run.sh和config.yaml 放到映射目录中（/var/www）
-按需修改后再创建镜像
-
-注：以创建时间为准，每24小时拉取一次，配置文件修改后下次拉取时即可生效。
-
-```
-docker run -d --name ydlpod \
-    -p 80:8001 \
-    -v /var/www:/app \
-    --restart unless-stopped \
-    jxjxjhjh/ydlpod
-```
+1.下载 config.yaml docker-compose.yml pod.opml run.sh
+2.在 config.yaml 中按格式添加项目
+3.run.sh 默认24小时爬一次项目，可自行修改，然后授予权限 chmod +x run.sh
+4.查看 docker-compose.yml ，按需修改，最后 docker-compose up -d 创建容器即可
