@@ -1,9 +1,9 @@
-FROM python:3
+FROM python:3.9
 
 WORKDIR /app
 
 RUN apt update && apt install ffmpeg -y && \
-    pip install git+https://github.com//ydl-podcast.git
+    pip install git+https://github.com/nbr23/ydl-podcast.git
 
 EXPOSE 8001
 USER 1000
