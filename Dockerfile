@@ -2,7 +2,7 @@ FROM python
 
 WORKDIR /app
 
-RUN pip install youtube-dl git+https://github.com/nbr23/ydl-podcast.git
+RUN pip install FFmpeg git+https://github.com/nbr23/ydl-podcast.git
 
 EXPOSE 8001
 
