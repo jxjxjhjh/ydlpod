@@ -2,7 +2,7 @@ FROM alpine
 
 WORKDIR /app
 
-RUN apk --no-cache add ca-certificates python3 py3-pip ffmpeg \
+RUN apk --no-cache add ca-certificates git python3 py3-pip ffmpeg \
 && pip install --disable-pip-version-check youtube-dl \
 && pip install git+https://github.com/nbr23/ydl-podcast.git
 
