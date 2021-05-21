@@ -2,8 +2,10 @@ FROM python:alpine
 
 WORKDIR /app
 
-RUN apt update && apt install FFmpeg
 RUN pip install git+https://github.com/nbr23/ydl-podcast.git
+
+RUN apk --no-cache add ca-certificates python3 py3-pip ffmpeg \
+&& pip3 install --disable-pip-version-check youtube-dl
 
 EXPOSE 8001
 
