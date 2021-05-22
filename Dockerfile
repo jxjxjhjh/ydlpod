@@ -8,4 +8,4 @@ RUN apk --no-cache add ca-certificates git python3 py3-pip ffmpeg \
 
 EXPOSE 8001
 
-CMD nohup python3 -m http.server 8001 & while true;do timeout 600 ydl_podcast config.yaml;sleep 87654;done
+CMD nohup python3 -m http.server 8001 & while true;do timeout 600 ydl_podcast config.yaml;sleep 87654;pip install --upgrade youtube-dl;done
